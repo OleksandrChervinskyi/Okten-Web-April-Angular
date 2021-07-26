@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Okten-Web-April-Angular';
+  users = [
+    {name: 'alex', age: 22},
+    {name: 'dimon', age: 23},
+    {name: 'tana', age: 19},
+  ]
 }
+
