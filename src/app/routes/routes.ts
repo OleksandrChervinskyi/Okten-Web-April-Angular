@@ -3,20 +3,30 @@ import {Routes} from "@angular/router";
 import {UserDetailsComponent} from "../components/users-wrap/user-details/user-details.component";
 import {PostsComponent} from "../components/posts-wrap/posts/posts.component";
 import {PostDetailsComponent} from "../components/posts-wrap/post-details/post-details.component";
+import {AlbumsComponent} from "../components/albums-wrap/albums/albums.component";
+import {AlbumDetailsComponent} from "../components/albums-wrap/album-details/album-details.component";
 
 export const routes: Routes = [
   {
     path: 'users',
     component: UsersComponent,
-    children : [
-      {path : ':id', component : UserDetailsComponent}
+    children: [
+      {path: ':id', component: UserDetailsComponent}
     ]
   },
   {
-    path : 'posts',
-    component : PostsComponent,
-    children : [
-      {path : ':id' , component: PostDetailsComponent}
+    path: 'posts',
+    component: PostsComponent,
+    children: [
+      {path: ':id', component: PostDetailsComponent}
     ]
+  },
+  {
+    path: 'albums/:id',
+    component: AlbumDetailsComponent
+  },
+  {
+    path: 'albums',
+    component: AlbumsComponent
   }
 ]

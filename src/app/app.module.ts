@@ -11,6 +11,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {routes} from "./routes/routes";
 import {PostDetailsComponent} from './components/posts-wrap/post-details/post-details.component';
 import { PostComponent } from './components/posts-wrap/post/post.component';
+import { AlbumsComponent } from './components/albums-wrap/albums/albums.component';
+import { AlbumComponent } from './components/albums-wrap/album/album.component';
+import { AlbumDetailsComponent } from './components/albums-wrap/album-details/album-details.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { PostComponent } from './components/posts-wrap/post/post.component';
     UserDetailsComponent,
     PostDetailsComponent,
     PostComponent,
+    AlbumsComponent,
+    AlbumComponent,
+    AlbumDetailsComponent,
   ],
   imports: [
     BrowserModule,
