@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {UserService} from "./services/user.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,11 @@ import {UserService} from "./services/user.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Okten-Web-April-Angular';
 
-constructor(private userServices : UserService) {
-  this.userServices.doSomeStuff()
-}
+  constructor() {
+
+  }
+
 }
 
 

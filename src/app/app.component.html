@@ -1,15 +1,11 @@
-{{title}}
 <div>
-<!--  <ul>-->
-<!--    <li *ngFor="let user of users">-->
-
-<!--      <div *ngIf="user.age < 20">-->
-<!--        {{user.name}}-->
-<!--      </div>-->
-
-<!--    </li>-->
-<!--  </ul>-->
-  <hr>
-  <app-users></app-users>
+  <a routerLink="users">Users</a>
+  <a routerLink="posts">Posts</a>
+  <a routerLink="albums">Albums</a>
+  <a routerLink="todos">Todos</a>
+  <a routerLink="photos">Photos</a>
+  <a routerLink="comments">Comments</a>
 </div>
+<router-outlet></router-outlet>
+
 
