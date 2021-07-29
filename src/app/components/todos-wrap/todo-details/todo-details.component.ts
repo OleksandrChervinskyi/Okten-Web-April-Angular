@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {ITodo} from "../../../models/todos/ITodo";
+import {ITodo} from "../../../models";
 import {TodosService} from "../../../services/todos/todos.service";
 
 @Component({

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IAlbum} from "../../../models/albums/IAlbum";
+import {IAlbum} from "../../../models";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({

@@ -1,4 +1,4 @@
-import {AlbumDetailsComponent} from "../../components/albums-wrap/album-details/album-details.component";
+import {AlbumDetailsComponent} from "../../components";
 import {AlbumsGuardsService} from "../../services/albums/albums-guards.service";
 
 export const AlbumRouteChildrens = {

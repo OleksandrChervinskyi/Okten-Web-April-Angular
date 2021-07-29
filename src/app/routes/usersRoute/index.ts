@@ -1,5 +1,4 @@
-import {UsersComponent} from "../../components/users-wrap/users/users.component";
-import {UserDetailsComponent} from "../../components/users-wrap/user-details/user-details.component";
+import {UserDetailsComponent, UsersComponent} from "../../components";
 import {UserGuardsService} from "../../services/users/user-guards.service";
 
 export const UsersRoute =
