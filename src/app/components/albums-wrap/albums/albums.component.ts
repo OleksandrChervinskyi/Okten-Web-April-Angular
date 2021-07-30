@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IAlbum} from "../../../models/albums/IAlbum";
+import {IAlbum} from "../../../models";
 import {AlbumsService} from "../../../services/albums/albums.service";
 
 @Component({

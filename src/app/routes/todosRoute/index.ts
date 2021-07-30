@@ -1,5 +1,4 @@
-import {TodosComponent} from "../../components/todos-wrap/todos/todos.component";
-import {TodoDetailsComponent} from "../../components/todos-wrap/todo-details/todo-details.component";
+import {TodoDetailsComponent, TodosComponent} from "../../components";
 import {TodoGuardsService} from "../../services/todos/todo-guards.service";
 
 export const TodosRoute =

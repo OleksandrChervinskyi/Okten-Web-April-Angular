@@ -1,5 +1,4 @@
-import {PostsComponent} from "../../components/posts-wrap/posts/posts.component";
-import {PostDetailsComponent} from "../../components/posts-wrap/post-details/post-details.component";
+import {PostDetailsComponent, PostsComponent} from "../../components";
 import {PostsGuardService} from "../../services/posts/posts-guard.service";
 
 export const PostsRoute =
