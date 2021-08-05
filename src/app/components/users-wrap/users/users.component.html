@@ -1,0 +1,11 @@
+<form #tref (ngSubmit)="showMore(tref)">
+  <select name="usersList">
+    <option *ngFor="let user of users" [value]="user.id">{{user.name}}</option>
+  </select>
+  <button>Show more</button>
+</form>
+<hr>
+<div>
+  <app-user [oneUser]="oneUser"></app-user>
+</div>
+

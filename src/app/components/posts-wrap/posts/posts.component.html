@@ -1,0 +1,6 @@
+<form [formGroup]="myForm" (ngSubmit)="showDetails()">
+  <select formControlName="postsList">
+    <option *ngFor="let post of posts" [value]="post.id">{{post.id}} - {{post.title}}</option>
+  </select>
+  <button>Show more</button>
+</form>
