@@ -7,9 +7,10 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {UserComponent} from './components/users-wrap/user/user.component';
 import {PostsComponent} from './components/posts-wrap/posts/posts.component';
-import {Router, RouterModule} from "@angular/router";
+import {RouterModule} from "@angular/router";
 import {routes} from "./routes";
 import { PostComponent } from './components/posts-wrap/post/post.component';
+import { OneExectPostComponent } from './components/posts-wrap/one-exect-post/one-exect-post.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PostComponent } from './components/posts-wrap/post/post.component';
     UserComponent,
     PostsComponent,
     PostComponent,
+    OneExectPostComponent,
   ],
   imports: [
     BrowserModule,

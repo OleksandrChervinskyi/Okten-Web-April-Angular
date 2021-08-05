@@ -1,0 +1,14 @@
+<form [formGroup]="myForm" (ngSubmit)="getExactPost()">
+  <div>
+    <input type="number" formControlName="exactIdInput" [placeholder]="'Enter Post id, which wonna get'">
+    <span *ngIf="myForm.controls.exactIdInput.errors?.required">
+      Must be required
+    </span>
+    <span *ngIf="myForm.controls.exactIdInput.errors?.numberLimits">
+      , {{this.myForm.controls.exactIdInput.errors?.numberLimits}}
+    </span>
+  </div>
+  <button [disabled]="myForm.invalid">Get one Post</button>
+</form>
+{{post | json}}
+
