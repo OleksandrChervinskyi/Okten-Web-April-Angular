@@ -1,6 +1,8 @@
-import {UsersComponent} from "../../components/users-wrap/users/users.component";
+import {UsersComponent} from "../../components";
+import {UserResolveService} from "../../services/users/user-resolve.service";
 
 export const UsersRoutes = {
   path : 'users',
-  component : UsersComponent
+  component : UsersComponent,
+  resolve : {usersList : UserResolveService }
 }

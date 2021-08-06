@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {PostsService} from "../../../services/posts/posts.service";
-import {IPost} from "../../../models/posts/IPosts";
+import {IPost} from "../../../models";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -32,7 +32,8 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.postsService.getAllPosts().subscribe(value => this.posts = value)
+    // By resolve
+    this.activatedRoute.data.subscribe(value => this.posts = value.postsList)
   }
 
   showDetails() {

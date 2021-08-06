@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {PostsService} from "../../../services/posts/posts.service";
-import {IPost} from "../../../models/posts/IPosts";
+import {IPost} from "../../../models";
+import {customLimitValidators} from "./customValidators";
 
 @Component({
   selector: 'app-one-exect-post',
@@ -12,19 +13,9 @@ export class OneExectPostComponent implements OnInit {
 
   post: IPost
 
-  //Custom Validators
-  customValidators(control: AbstractControl) {
-
-    if (control.value > 100 || control.value < 1) {
-      return {numberLimits: 'Limits must be bettwen 1 - 100'}
-    }
-    return null
-
-  }
-
   // Form`s controls
   controls = {
-    exactIdInput: new FormControl('', [Validators.required, this.customValidators])
+    exactIdInput: new FormControl('', [Validators.required, customLimitValidators])
   }
 
   //Reactive form
@@ -41,7 +32,3 @@ export class OneExectPostComponent implements OnInit {
   }
 }
 
-// !!resolve
-// indexes
-// check tpl form
-// comments

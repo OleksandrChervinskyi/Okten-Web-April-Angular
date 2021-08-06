@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IPost} from "../../../models/posts/IPosts";
+import {IPost} from "../../../models";
 import {ActivatedRoute, Router} from "@angular/router";
 import {PostsService} from "../../../services/posts/posts.service";
 
@@ -14,23 +14,28 @@ export class PostComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private postServices : PostsService
+    private postServices: PostsService
   ) {
     this.activatedRoute.params.subscribe(({id}) => {
-      if (this.router.getCurrentNavigation()?.extras.state){
+      if (this.router.getCurrentNavigation()?.extras.state) {
         // get post from state
         this.post = this.router.getCurrentNavigation()?.extras?.state as IPost
         console.log('Get post from state')
-      }else {
+      } else {
         // get post from https://jsonplaceholder.typicode.com
         this.postServices.getPostById(id).subscribe(value => this.post = value)
         console.log('Get post from https://jsonplaceholder.typicode.com')
       }
+
     })
 
   }
 
   ngOnInit(): void {
+
   }
 
+  navigateToCommentsOfPost() {
+    this.router.navigate(['comments'], {relativeTo: this.activatedRoute, state: this.post})
+  }
 }
