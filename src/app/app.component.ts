@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {CounterStoreService} from "./services/counter-store.service";
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,16 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Okten-Web-April-Angular';
+  gCounter: number
 
-  constructor() {
 
+  constructor(private counterStoreService: CounterStoreService) {
+    this.counterStoreService.getCurentCounter().subscribe(value => this.gCounter = value)
+  }
+
+  setCounter() {
+    const oldCountValue = this.counterStoreService.getSnapShotCounter()
+    this.counterStoreService.setNewCounter(oldCountValue + 1)
   }
 }
 

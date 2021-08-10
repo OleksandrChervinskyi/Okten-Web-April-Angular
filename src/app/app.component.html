@@ -1,3 +1,21 @@
-{{title}}
+<div class="nav">
+  <div>
+    <a routerLink="/" (click)="setCounter()">Home</a>
+    <br>
+    <a routerLink="users" (click)="setCounter()">Users</a>
+    <br>
+    <a routerLink="posts" (click)="setCounter()">Posts</a>
+  </div>
+
+  <div>
+    <h4>Total count of click - {{gCounter}}</h4>
+
+  </div>
+
+
+</div>
+
+<hr>
+<router-outlet></router-outlet>
 
 
