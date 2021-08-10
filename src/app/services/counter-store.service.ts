@@ -5,12 +5,7 @@ import {BehaviorSubject} from "rxjs";
   providedIn: 'root'
 })
 export class CounterStoreService {
-
   private counter: BehaviorSubject<number> = new BehaviorSubject<number>(0)
-
-  constructor
-  () {
-  }
 
   getCurentCounter() {
     return this.counter
